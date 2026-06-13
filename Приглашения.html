@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Илья & Валентина | Свадебное приглашение | 13.09.2026</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f5fc;
+            color: #2c2a29;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section с вашим фото */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(55, 25, 65, 0.4), rgba(40, 20, 50, 0.5)), url('https://i.pinimg.com/736x/6c/8c/4b/6c8c4b3304fec28e291a9897ba23d587.jpg') center center / cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background: rgba(0,0,0,0.25);
+            padding: 2rem;
+            border-radius: 24px;
+            backdrop-filter: blur(2px);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-date {
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 4px;
+            border-top: 1px solid rgba(255,255,255,0.7);
+            border-bottom: 1px solid rgba(255,255,255,0.7);
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin-bottom: 2rem;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #533d63;
+            position: relative;
+        }
+
+        /* timer */
+        .countdown-wrapper {
+            background: #ede4f5;
+            border-radius: 60px;
+            padding: 40px 20px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .timer-block {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 32px;
+            min-width: 100px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+
+        .timer-number {
+            font-size: 2.8rem;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            color: #6a4e8a;
+        }
+
+        .timer-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8e72a7;
+        }
+
+        /* event info */
+        .info-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 36px;
+            padding: 32px 24px;
+            text-align: center;
+            flex: 1 1 260px;
+            box-shadow: 0 15px 30px -12px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+            border: 1px solid #e6daf0;
+        }
+
+        .card i {
+            font-size: 2.8rem;
+            color: #8261a5;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: #3f2d4e;
+        }
+
+        .address-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #8261a5;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed #b49ad1;
+        }
+
+        .address-link:hover {
+            color: #533d63;
+        }
+
+        footer {
+            background: #2c2433;
+            color: #ddd0ea;
+            text-align: center;
+            padding: 32px 0;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 700px) {
+            section {
+                padding: 50px 0;
+            }
+            .timer-block {
+                min-width: 70px;
+                padding: 10px 12px;
+            }
+            .timer-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-overlay">
+        <h1 class="hero-title">Илья & Валентина</h1>
+        <div class="hero-date">13 Сентября 2026</div>
+    </div>
+</section>
+
+<div class="container">
+    <!-- Таймер обратного отсчета -->
+    <div class="countdown-wrapper">
+        <h2 class="section-title" style="margin-bottom: 0.5rem;">До нашей свадьбы осталось</h2>
+        <div class="timer" id="timer">
+            <div class="timer-block"><span class="timer-number" id="days">00</span><div class="timer-label">Дней</div></div>
+            <div class="timer-block"><span class="timer-number" id="hours">00</span><div class="timer-label">Часов</div></div>
+            <div class="timer-block"><span class="timer-number" id="minutes">00</span><div class="timer-label">Минут</div></div>
+            <div class="timer-block"><span class="timer-number" id="seconds">00</span><div class="timer-label">Секунд</div></div>
+        </div>
+    </div>
+
+    <!-- Информация о мероприятии -->
+    <section>
+        <h2 class="section-title">Детали праздника</h2>
+        <div class="info-cards">
+            <div class="card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>13 сентября 2026</h3>
+                <p>Воскресенье<br><strong>Сбор гостей в 16:00</strong></p>
+            </div>
+            <div class="card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Hilton Moscow Leningradskaya 5*</h3>
+                <p>Каланчёвская ул., 21/40, Москва</p>
+                <a href="https://maps.google.com/?q=Hilton+Moscow+Leningradskaya+21/40" target="_blank" class="address-link"><i class="fas fa-directions"></i> Построить маршрут</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-glass-cheers"></i>
+                <h3>Дресс-код</h3>
+                <p>Праздничный образ</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <p>Илья & Валентина — с нетерпением ждём встречи 13 сентября 2026 💜</p>
+    </div>
+</footer>
+
+<script>
+    function updateTimer() {
+        const weddingDate = new Date("September 13, 2026 16:00:00").getTime();
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if(distance < 0) {
+            document.getElementById("days").innerText = "00";
+            document.getElementById("hours").innerText = "00";
+            document.getElementById("minutes").innerText = "00";
+            document.getElementById("seconds").innerText = "00";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (86400000)) / (3600000));
+        const minutes = Math.floor((distance % 3600000) / 60000);
+        const seconds = Math.floor((distance % 60000) / 1000);
+
+        document.getElementById("days").innerText = days < 10 ? "0"+days : days;
+        document.getElementById("hours").innerText = hours < 10 ? "0"+hours : hours;
+        document.getElementById("minutes").innerText = minutes < 10 ? "0"+minutes : minutes;
+        document.getElementById("seconds").innerText = seconds < 10 ? "0"+seconds : seconds;
+    }
+    setInterval(updateTimer, 1000);
+    updateTimer();
+</script>
+</body>
+</html>
